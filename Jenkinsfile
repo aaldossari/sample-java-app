@@ -27,15 +27,15 @@ pipeline {
         stage('sonar scan'){
             steps {
               sh "mvn clean verify sonar:sonar \
-  -Dsonar.projectKey=assignment-1 \
+  -Dsonar.projectKey=Abdulaziz_Aldossari \
   -Dsonar.host.url=http://54.226.50.200 \
-  -Dsonar.login=sqp_bf5cbb32094b71c3d0f40839ea93f5b4cf554567"
+  -Dsonar.login=sqp_33ced7f290e48592ae0d1787233c86e4e03885f2"
             }
         }
 
         stage('Package'){
             steps {
-                
+
                 sh "mvn package"
             }
             post {
